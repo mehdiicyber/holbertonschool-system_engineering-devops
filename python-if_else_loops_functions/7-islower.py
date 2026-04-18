@@ -4,7 +4,7 @@ def islower(c):
     else:
         return False
 if True:
-  print("{} is lower".format(c))
+    print("{} is lower".format(c))
 else:
-  print("{} is upper".format(c))
+    print("{} is upper".format(c))
       

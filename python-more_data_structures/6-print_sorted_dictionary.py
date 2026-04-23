@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 def print_sorted_dictionary(a_dictionary):
-    print("""Number: {}\n""
-        ""ids: {}\n""
-        ""language: {}\n""
-        ""track: {}\n""".format(a_dictionary['Number'], a_dictionary['ids'], a_dictionary['language'], a_dictionary['track'])
+    keys = sorted(a_dictionary.keys())
+    for key in keys:
+        print("{}: {}".format(key, a_dictionary.get(key)))

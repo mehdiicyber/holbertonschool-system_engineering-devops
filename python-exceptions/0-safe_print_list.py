@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 def safe_print_list(my_list=[], x=0):
     """
     Siyahıdakı x qədər elementi çap edən funksiya.

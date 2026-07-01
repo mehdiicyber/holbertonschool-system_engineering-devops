@@ -1,0 +1,29 @@
+[ User Browser ]
+       │
+       │ (1) DNS Request: "Where is www.foobar.com?"
+       ▼
+[ DNS Server ] ──► Returns IP: 8.8.8.8
+       │
+       │ (2) HTTP/HTTPS Request to 8.8.8.8
+       ▼
+┌────────────────────────────────────────────────────────┐
+│ Single Server (IP: 8.8.8.8)                            │
+│                                                        │
+│  ┌────────────────┐                                    │
+│  │   Web Server   │ (Handles HTTP, Static Files)       │
+│  │    (Nginx)     │                                    │
+│  └───────┬────────┘                                    │
+│          │ (3) Reverse Proxies Dynamic Requests        │
+│          ▼                                             │
+│  ┌────────────────┐                                    │
+│  │  App Server    │ (Executes Server-Side Code)        │
+│  └───────┬────────┘                                    │
+│          │                                             │
+│          ├──► [ Application Files ] (Codebase)         │
+│          │                                             │
+│          ▼                                             │
+│  ┌────────────────┐                                    │
+│  │    Database    │ (Stores Data)                      │
+│  │    (MySQL)     │                                    │
+│  └────────────────┘                                    │
+└────────────────────────────────────────────────────────┘
